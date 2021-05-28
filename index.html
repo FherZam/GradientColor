@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Generator</title>
+
+    <style>
+        .area {
+            width: 100%;
+            height: 300px;
+        }
+    </style>
+
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <div id="app">
+
+        <h1> {{ title }} </h1>
+        <hr>
+        <form>
+            <label>
+                Color 1:<input type="color" v-model="fcolor" />
+            </label>
+            <label>
+                Color 2:<input type="color" v-model="scolor" />
+            </label>
+        </form>
+
+        <p>HEX 1: {{ fcolor }}</p>
+        <p>HEX 2: {{ scolor }}</p>
+
+        <form>
+            <label>
+                <input type="text" :value="setColor">
+            </label>
+            <br>
+
+            <label>
+                <input type="radio" value="right" v-model.number="orientation" />
+                Right
+            </label>
+            <label>
+                <input type="radio" value="left" v-model.number="orientation" />
+                Left
+            </label>
+            <label>
+                <input type="radio" value="top" v-model.number="orientation" />
+                Top
+            </label>
+            <label>
+                <input type="radio" value="bottom" v-model.number="orientation" />
+                Bottom
+            </label>
+        </form>
+        
+        <p>{{setColor}}</p>
+        <p>{{ orientation }}</p>
+
+        <div class="area" :style="setColor"></div>
+
+    </div>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/mountApp.js"></script>
+</body>
+</html>
