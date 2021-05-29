@@ -1,9 +1,9 @@
 const app = Vue.createApp({
     data() {
         return {
-            title: 'Garient Generator',
-            fcolor: '#FFFFFF',
-            scolor: '#AAAAAA',
+            title: 'Gradient Generator',
+            fcolor: '#d5ee11',
+            scolor: '#f59e24',
             orientation: 'right'
         }
     },
